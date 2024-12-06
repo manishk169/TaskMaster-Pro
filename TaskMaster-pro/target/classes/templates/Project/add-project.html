@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Project</title>
+    <link rel="stylesheet" th:href="@{/css/user-style.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+    <!-- Quill Editor CSS and JS -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/titlebar-logo.png">
+    
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+</head>
+<body>
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div th:insert="~{fragments/sidebar :: sidebar}"></div>
+
+    <!-- Main Content -->
+    <div class="main-content p-4 w-100">
+        <div class="container mt-3">
+            <h1>Add a New Project</h1><br><br>
+
+            <form th:action="@{/user/projects/addProject/add}" method="post" onsubmit="return submitForm(event)">
+                <div class="mb-3">
+                    <label for="projectName" class="form-label">Project Name</label>
+                    <input type="text" class="form-control" id="projectName" name="projectName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="client" class="form-label">Select Client</label>
+                    <select class="form-control" id="client" name="clientId" required>
+                        <option value="" disabled selected>Select Client</option>
+                        <option th:each="client : ${clients}" th:value="${client.id}" th:text="${client.clientName}"></option>
+                    </select>
+                </div>
+
+                <!-- Project description using Quill editor -->
+                <div class="mb-3">
+                    <label for="projectDescription" class="form-label">Project Description</label>
+                    <div id="editor" class="form-control" style="height: 200px;"></div>
+                </div>
+
+                <!-- Hidden input to store Quill editor content -->
+                <input type="hidden" name="projectDescription" id="projectDescriptionInput" value="">
+                <button type="submit" class="btn btn-success">Add Project</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Initialize Quill -->
+<script>
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        placeholder: 'Write your project description here...',
+        modules: {
+            toolbar: [
+                [{ 'font': [] }, { 'size': [] }],
+                ['bold', 'italic', 'underline', 'strike'],
+                [{ 'color': [] }, { 'background': [] }],
+                [{ 'script': 'sub' }, { 'script': 'super' }],
+                ['blockquote', 'code-block'],
+                [{ 'header': 1 }, { 'header': 2 }],
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                [{ 'indent': '-1' }, { 'indent': '+1' }],
+                [{ 'align': [] }],
+                ['link', 'image', 'video'],
+                ['clean']
+            ]
+        }
+    });
+
+    function submitForm(event) {
+        event.preventDefault();  // Prevent form from submitting immediately
+
+        // Get the plain text content from the Quill editor
+        const projectDescription = quill.getText();  // Get the plain text without HTML tags
+
+        // Set the value of the hidden input field
+        document.getElementById('projectDescriptionInput').value = projectDescription;
+
+        // Submit the form after setting the hidden field value
+        event.target.submit();  // Manually submit the form
+    }
+
+</script>
+
+</body>
+</html>

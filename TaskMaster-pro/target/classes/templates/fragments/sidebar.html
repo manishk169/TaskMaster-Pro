@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar</title>
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"
+	crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	<!-- Sidebar -->
+	<div class="sidebar bg-dark text-light d-flex flex-column p-3"
+		th:fragment="sidebar">
+		<div class="user-info mb-4">
+		    <a href = "userDashboard">
+			<img src="/assets/sidebar-logo.png" alt="Logo"  width="180"
+				height="30" class="sidebar-logo mb-3"> <br> <br> <br>
+            </a>
+			<div class="username-field">
+				&nbsp; &nbsp; <i class="fa-solid fa-user-tie fa-xl"
+					style="color: #FFD43B;"></i> &nbsp; 
+					<a th:href="@{/user/profile}" th:text="${fullName}" style="color: white; text-decoration: none;">User</a>
+			</div>
+
+		</div>
+		<hr>
+		<ul class="nav flex-column nav-pills mb-auto">
+			<li class="nav-item"><a href="/user/userDashboard"
+				class="nav-link text-light"> <i
+					class="fa-solid fa-tachometer-alt"></i> &nbsp; Dashboard
+			</a></li>
+			
+			<li class="nav-item"><a href="/user/clients"
+				class="nav-link text-light"> <i class="fa-solid fa-users"></i>
+					&nbsp; Clients
+			</a></li>
+			
+			<li class="nav-item"><a href="/user/projects"
+				class="nav-link text-light"> <i class="fa-solid fa-briefcase"></i>
+					&nbsp; Projects
+			</a></li>
+			
+			<li class="nav-item"><a href="/user/tasks"
+				class="nav-link text-light"> <i class="fa-solid fa-tasks"></i>
+					&nbsp; Tasks	
+			</a></li>
+
+			<li class="nav-item"><a href = "#"
+				class="nav-link text-light"> <i class="fa-solid fa-bell"></i>
+					&nbsp; Notifications <span class="badge bg-danger">3</span>
+			</a></li>
+		</ul>
+
+
+		<div class="logout mt-auto">
+			<hr>
+			<form th:action="@{/logout}" method="post">
+				&nbsp; &nbsp; &nbsp;
+				<button type="submit" class="btn btn-danger btn-logout">
+					<i class="fa-solid fa-sign-out-alt"></i> &nbsp; Logout
+				</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

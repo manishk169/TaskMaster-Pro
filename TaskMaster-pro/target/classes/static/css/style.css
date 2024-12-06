@@ -1,0 +1,195 @@
+/* src/main/resources/static/css/main.css */
+
+/* imports (fonts and other files) */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css");
+ */
+ 
+ 
+ /* General body styling */
+body {
+    background-color: #fbf3ff;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Main content */
+
+
+h2 {
+    color: #007bff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p.lead {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li::before {
+    content: "\2022"; /* Custom bullet */
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+a.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+a.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #343a40;
+    padding: 40px 0;
+    color: white;
+}
+
+.footer h5 {
+    color: #ffffff;
+}
+
+.footer .text-white {
+    color: #ccc;
+}
+
+.footer .social-icons a {
+    color: white;
+    margin-right: 10px;
+}
+
+.footer .social-icons a:hover {
+    color: #007bff;
+}
+
+
+/* registration page styling */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+  background: #fbf3ff;
+} 
+.reg-container {
+  position: absolute;
+  max-width: 900px;
+  height: 580px;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+} 
+.myLeftCtn {
+  position: relative;
+  background: #fff;
+  border-radius: 25px;
+  height: 100%;
+  padding: 25px;
+  background-color : #f2ff29;
+  max-width : 500px;
+}
+.myLeftCtn header {
+  color: blueviolet;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.row{
+height: 100%;
+} 
+.myCard {
+  position: relative;
+  background: #fff;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  
+  max-width : 500px;
+  margin : 30px auto;
+} 
+
+.box {
+  position: relative;
+  margin: 20px;
+  margin-bottom: 100px;
+} 
+.myLeftCtn .myInput {
+  width: 300px;
+  border-radius: 25px;
+  padding: 10px;
+  padding-left: 50px;
+  margin-bottom : 15px;
+  border: none;
+  -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+}
+.myLeftCtn .myInput:focus {
+  outline: none;
+} 
+.myForm {
+  position: relative;
+  margin-top: 50px;
+} 
+
+
+.myLeftCtn .butt {
+  background: linear-gradient(45deg, #bb36fd, #9b00e8);
+  color: #fff;
+  width: 230px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+} 
+.myLeftCtn .butt:hover {
+  background: linear-gradient(45deg, #c85bff, #b726ff);
+}
+.myLeftCtn .butt:focus {
+  outline: none;
+} 
+.myLeftCtn .fas {
+  position: relative;
+  color: #bb36fd;
+  left: 36px;
+} 
+
+.butt_out {
+  background: transparent;
+  color: #fff;
+  width: 120px;
+  border: 2px solid#fff;
+  border-radius: 25px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+} 
+.butt_out:hover {
+  border: 2px solid#eecbff;
+} 
+.butt_out:focus {
+  outline: none;
+}

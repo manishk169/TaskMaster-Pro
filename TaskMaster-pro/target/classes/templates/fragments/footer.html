@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Footer Fragment</title>
+    
+</head>
+<body>
+
+<th:block th:fragment="footer">
+    <footer class="footer bg-dark text-white mt-4 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>TaskMasterPro is a leading freelance management platform that helps professionals manage their tasks, projects, and clients efficiently. We aim to empower freelancers with the tools they need to succeed.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">Home</a></li>
+                        <li><a href="#" class="text-white">Features</a></li>
+                        <li><a href="aboutUs" class="text-white">About </a></li>
+                        <li><a href="contactUs" class="text-white">Contact </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-telephone">&nbsp;</i> +1 123 456 7890</li>
+                        <li><i class="bi bi-envelope">&nbsp;</i> support@taskmasterpro.com</li>
+                        <li><i class="bi bi-geo-alt">&nbsp;</i> Panvel, Raigad, Maharashtra - 410206</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook text-white"></i></a>
+                        <a href="#"><i class="bi bi-twitter text-white"></i></a>
+                        <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-md-12">
+                    <p>&copy; 2024 TaskMasterPro. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</th:block>
+
+</body>
+</html>

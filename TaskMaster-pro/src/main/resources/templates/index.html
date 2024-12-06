@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskMasterPro</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/assets/titlebar-logo.png">
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div th:insert="~{fragments/header :: header}"></div>
+
+
+<main class="container mt-5">
+    <!-- Main body content -->
+    <br> <br> <br>
+    <div class="text-center">
+        <h2>Welcome to TaskMasterPro!</h2>
+        <p class="lead">Your all-in-one solution for managing freelance tasks with simplicity and efficiency.</p>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h3>About TaskMasterPro</h3>
+            <p>TaskMasterPro helps freelancers organize, track, and manage tasks effortlessly. Whether it's project planning, time tracking, or invoicing, TaskMasterPro ensures that you stay on top of your work.</p>
+            <ul>
+                <li>Organize your freelance tasks with ease</li>
+                <li>Monitor progress and deadlines</li>
+                <li>Generate detailed reports and invoices</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Why Choose TaskMasterPro?</h3>
+            <p>With TaskMasterPro, you can focus on delivering quality work to your clients. Our platform offers:</p>
+            <ul>
+                <li>User-friendly task management interface</li>
+                <li>Customizable workflows and reminders</li>
+                <li>Collaborative tools for working with clients</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-5 text-center">
+        <div class="col-md-12">
+            <h3>Ready to Simplify Your Workflow?</h3>
+            <p>Sign up now and transform the way you manage freelance projects.</p>
+            <a href="registration" class="btn btn-primary btn-lg">Register Now</a>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<div th:insert="~{fragments/footer :: footer}"></div>
+
+</body>
+
+</html>
