@@ -3,6 +3,7 @@ A freelancer-focused task management web app using Spring Boot and Thymeleaf. Th
 
 
 <h1>Project Screenshots</h1>
+
 ![homepage](https://github.com/user-attachments/assets/bac049fb-f00c-44b3-adb2-31f050a49fe3)
 
 ![about-us](https://github.com/user-attachments/assets/bbfe3e57-24ec-4a56-a001-e90763e6f6c4)
