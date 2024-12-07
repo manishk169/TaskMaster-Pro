@@ -1,6 +1,13 @@
 # TaskMaster-Pro-
 A freelancer-focused task management web app using Spring Boot and Thymeleaf. The application supports user registration, client and project management, and task tracking with real-time updates. Implemented secure login, CRUD functionalities using Spring Data JPA with MySQL database.
 
+<h1>Technology Used</h1>
+Front-end : Html, CSS, Bootstrap, Thymeleaf    <br>
+Back-end : Java                <br>
+Database : MySQL,      <br>
+Software : SpringToolSuite4 (STS), MySQL Workbench 8.0 CE       <br>
+Frameworks : Spring Boot, Hibernate JPA
+Dependencies and Tools :  Spring Data JPA, Springboot Thymeleaf, Spring Web, Springboot Devtools, Spring Security           <br>
 
 <h1>Project Screenshots</h1>
 
