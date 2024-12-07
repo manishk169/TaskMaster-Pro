@@ -2,12 +2,12 @@
 A freelancer-focused task management web app using Spring Boot and Thymeleaf. The application supports user registration, client and project management, and task tracking with real-time updates. Implemented secure login, CRUD functionalities using Spring Data JPA with MySQL database.
 
 <h1>Technology Used</h1>
-Front-end : Html, CSS, Bootstrap, Thymeleaf    <br>
-Back-end : Java                <br>
-Database : MySQL,      <br>
-Software : SpringToolSuite4 (STS), MySQL Workbench 8.0 CE       <br>
-Frameworks : Spring Boot, Hibernate JPA                <br>
-Dependencies and Tools :  Spring Data JPA, Springboot Thymeleaf, Spring Web, Springboot Devtools, Spring Security           <br>
+<b> Front-end :  </b> Html, CSS, Bootstrap, Thymeleaf    <br>
+<b> Back-end : </b> Java                <br>
+<b> Database : </b> MySQL,      <br>
+<b> Software :  </b> SpringToolSuite4 (STS), MySQL Workbench 8.0 CE       <br>
+<b> Frameworks : </b> Spring Boot, Hibernate JPA                <br>
+<b> Dependencies and Tools :  </b> Spring Data JPA, Springboot Thymeleaf, Spring Web, Springboot Devtools, Spring Security           <br>
 
 <h1>Project Screenshots</h1>
 
